@@ -5,7 +5,6 @@ class Place < ApplicationRecord
     day = Time.now().strftime('%a').downcase
     total_minutes = (Time.now.hour * 60 + Time.now.min)
     bool = false
-    binding.pry
     self.hours.each do |hour|
       if hour['day'] == day
         if hour['start'] * 60 < total_minutes && total_minutes < hour['stop'] * 60
