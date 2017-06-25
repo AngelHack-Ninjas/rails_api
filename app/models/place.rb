@@ -12,8 +12,8 @@ class Place < ApplicationRecord
           bool = true
         end
       end
-      return bool
     end
+    return bool
   end
 
   def get_distance(user)
