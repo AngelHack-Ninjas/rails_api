@@ -7,10 +7,16 @@ class PlacesController < ApplicationController
     user = {"lat": params[:lat],"long": params[:long]}
     Place.all.each do |place|
       if place.is_happy?
-        @places.push({place: place, hours: place.hours.all, distance: place.get_distance(user)})
+        if !params[:lat] || !params[:long]
+          @places.push(place)
+        else
+          @places.push({place: place, hours: place.hours.all, distance: place.get_distance(user)})
+        end
       end
     end
-    @places.sort_by! {|pl| pl[:distance]}
+    if params[:lat] || params[:long]
+      @places.sort_by! {|pl| pl[:distance]}
+    end
     render json: @places
   end
 end
