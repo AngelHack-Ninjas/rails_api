@@ -31,6 +31,10 @@ places = { "restaurant": [{
 "fri": [{
 "start": "15",
 "stop": "19"
+}],
+"sun": [{
+"start": "9",
+"stop": "23"
 }]
 }
 },
@@ -322,6 +326,10 @@ places = { "restaurant": [{
 "fri": [{
 "start": "15",
 "stop": "19"
+}],
+"sun": [{
+"start": "9",
+"stop": "23"
 }]
 }
 },
@@ -554,6 +562,10 @@ places = { "restaurant": [{
 "fri": [{
 "start": "15",
 "stop": "19"
+}],
+"sun": [{
+"start": "9",
+"stop": "23"
 }]
 }
 },
