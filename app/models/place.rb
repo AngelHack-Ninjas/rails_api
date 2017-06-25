@@ -10,6 +10,7 @@ class Place < ApplicationRecord
           return true
         end
       end
+      return false
     end
   end
 
