@@ -4,13 +4,14 @@ class Place < ApplicationRecord
   def is_happy?
     day = Time.now().strftime('%a').downcase
     total_minutes = (Time.now.hour * 60 + Time.now.min)
+    bool = false
     self.hours.each do |hour|
       if hour['day'] == day
         if hour['start'] * 60 < total_minutes && total_minutes < hour['stop'] * 60
-          return true
+          bool = true
         end
       end
-      return false
+      return bool
     end
   end
 
